@@ -58,9 +58,30 @@ section:hover {
 	background-color: #ddd;
 }
 
-section>div {
+.emotes {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.original {
+	width: 100%;
+	height: auto;
+}
+
+.x4 {
+	width: 112px;
+	height: 112px;
+}
+
+.x2 {
+	width: 56px;
+	height: 56px;
+}
+
+.x1 {
+	width: 28px;
+	height: 28px;
 }
 
 section img {
@@ -69,4 +90,32 @@ section img {
 
 .center {
 	text-align: center;
+}
+
+.new h2::after {
+	display: inline;
+	content: "NEW";
+	font-size: .75em;
+	padding: .25em .5em;
+	background: linear-gradient(130deg, #939, #9146ff);
+	border-radius: .5em;
+	margin: 0 .25em;
+	color: #fff;
+}
+
+.new:hover {
+	background-color: #9146ffaa;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #0f0f0f;
+		color: #fff;
+	}
+	section {
+		background-color: #222;
+	}
+	section:hover {
+		background-color: #fff3;
+	}
 }
